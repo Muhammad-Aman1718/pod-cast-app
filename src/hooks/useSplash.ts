@@ -1,0 +1,18 @@
+import React, { useEffect, useState } from 'react';
+
+const useSplash = () => {
+  const [open, setOpen] = useState<Boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return {
+    open,
+  };
+};
+
+export default useSplash;
