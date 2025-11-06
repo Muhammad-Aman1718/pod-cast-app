@@ -1,10 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import Home from '../screens/home/Home.tsx';
 import Home from '../screens/home/home.tsx';
 import Login from '../screens/auth/login.tsx';
 import Splash from '../screens/splash/splash.tsx';
 import useSplash from '../hooks/useSplash.ts';
+import Register from '../screens/auth/register.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +21,7 @@ const StackNavigation = () => {
         />
       ) : (
         <>
+          <Stack.Screen name="Register" component={Register} />
           <Stack.Screen
             name="Home"
             component={Home}

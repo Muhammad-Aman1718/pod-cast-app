@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useSplash = () => {
   const [open, setOpen] = useState<Boolean>(true);
@@ -7,6 +7,7 @@ const useSplash = () => {
     const timer = setTimeout(() => {
       setOpen(false);
     }, 2000);
+
     return () => clearTimeout(timer);
   }, []);
 
