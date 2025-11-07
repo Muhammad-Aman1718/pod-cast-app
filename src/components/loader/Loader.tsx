@@ -11,7 +11,6 @@ import {
   TextStyle,
 } from 'react-native';
 
-const { width, height } = Dimensions.get('window');
 
 interface CustomLoaderProps {
   visible?: boolean;

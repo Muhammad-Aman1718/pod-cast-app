@@ -21,20 +21,24 @@ const StackNavigation = () => {
         />
       ) : (
         <>
-          <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{
-              title: 'Home',
-              headerShown: true,
-            }}
-          />
           <Stack.Screen
             name="Login"
             component={Login}
             options={{
               title: 'Login',
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: 'Home',
               headerShown: true,
             }}
           />

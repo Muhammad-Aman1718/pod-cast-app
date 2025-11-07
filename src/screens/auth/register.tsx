@@ -1,17 +1,29 @@
 import React from 'react';
-import { View } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import HeadPhones from 'react-native-vector-icons/Feather';
-import Con from '../../assests/icon/headphone.svg';
+import { StyleSheet, Text, View } from 'react-native';
+import Logo from '../../assests/icon/headphone.svg';
 
 const Register = () => {
   return (
-    <View>
-      <Icon name="home" size={50} color="#007AFF" />
-      <HeadPhones name="headphones" size={50} color="#007AFF" />
-      <Con />
+    <View style={styles.container}>
+      <View>
+        <Logo width={40} height={40} stroke="white" />
+        <Text>Pod Cast</Text>
+      </View>
+      <View>
+        <View>
+          <Text>Login</Text>
+          <Text></Text>
+        </View>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#182F52',
+  },
+});
 
 export default Register;
