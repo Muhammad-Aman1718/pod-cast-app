@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Feather';
 interface AuthInputProps {
   inputTitle?: string;
   placeHolder?: string;
-  //   inputType:
+  iconComponent?: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 const AuthInput: React.FC<AuthInputProps> = ({ inputTitle, placeHolder }) => {
@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
   },
 
   inputContainer: {
-    borderWidth: 1,
     borderRadius: 10,
     height: 50,
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -66,9 +65,7 @@ const styles = StyleSheet.create({
     paddingRight: 15,
   },
   input: {
-    borderWidth: 1,
-    borderColor: '#000',
-    // width: '100%',
+    flex: 1,
   },
   icon: {},
 });

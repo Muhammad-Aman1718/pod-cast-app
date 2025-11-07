@@ -1,15 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import HeadPhone from '../../assests/icon/headphone.svg';
 import AuthInput from '../../components/inputs/AuthInput';
+import AuthBtn from '../../components/buttons/AuthBtn';
+import GoogleFacebook from '../../components/buttons/GoogleFacebook';
+import GoogleIcon from '../../assests/icon/google.svg';
+import FacebookIcon from '../../assests/icon/facebook.svg';
 
 const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <HeadPhone width={40} height={40} stroke="white" />
-        <Text style={styles.logoContainerText}>Pod Cast</Text>
+        <Text style={styles.logoContainerText}>Podcast</Text>
       </View>
       <View style={styles.inputContainer}>
         <View style={styles.inputContainerPageTitle}>
@@ -21,6 +25,12 @@ const Login = () => {
 
         <AuthInput inputTitle="Username" placeHolder="username" />
         <AuthInput inputTitle="Password" placeHolder="At least 8 character" />
+        <Text style={styles.forgetText}>Forget Password?</Text>
+        <AuthBtn btnTitle="Sign In" />
+      </View>
+      <View style={styles.googleFaceContainer}>
+        <GoogleFacebook IconComponent={GoogleIcon} title="Google" />
+        <GoogleFacebook IconComponent={FacebookIcon} title="Facebook" />
       </View>
     </View>
   );
@@ -28,24 +38,26 @@ const Login = () => {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
-    borderColor: 'green',
     flex: 1,
     backgroundColor: '#182F52',
     padding: 10,
+    justifyContent: 'center',
   },
   logoContainer: {
-    borderWidth: 1,
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     columnGap: 10,
+    marginBottom: 40,
   },
   logoContainerText: {
     fontSize: 24,
     color: 'white',
     fontWeight: '700',
   },
-  inputContainer: {},
+  inputContainer: {
+    rowGap: 20,
+  },
   inputContainerPageTitle: {
     alignItems: 'center',
   },
@@ -55,6 +67,17 @@ const styles = StyleSheet.create({
   },
   pageTitleDiscription: {
     color: 'rgba(157, 157, 157, 1) ',
+    fontSize: 12,
+  },
+  forgetText: {
+    color: 'white',
+    marginTop: -10,
+    textAlign: 'right',
+  },
+  googleFaceContainer: {
+    marginTop: 30,
+    flexDirection: 'row',
+    columnGap: 10,
   },
 });
 
