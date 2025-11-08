@@ -59,7 +59,9 @@ const Register = () => {
           <Text style={styles.alreadyAccountText}>
             Already have an account?
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Auth', { screen: 'Login' })}
+          >
             <Text style={styles.signText}>Sign In</Text>
           </TouchableOpacity>
         </View>

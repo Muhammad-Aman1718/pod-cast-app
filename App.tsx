@@ -5,7 +5,7 @@
  * @format
  */
 
-import StackNavigation from './src/navigation/stackNavigation';
+import RootNavigation from './src/navigation/stackNavigation/rootNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <StackNavigation />
+        <RootNavigation />
       </NavigationContainer>
     </SafeAreaProvider>
   );
