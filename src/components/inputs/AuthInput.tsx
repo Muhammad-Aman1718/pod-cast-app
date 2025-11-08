@@ -6,24 +6,32 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import ProfileIcon from '../../assests/icon/Profile.svg';
+import { SvgProps } from 'react-native-svg';
 import Icon from 'react-native-vector-icons/Feather';
 
 interface AuthInputProps {
   inputTitle?: string;
   placeHolder?: string;
-  iconComponent?: React.FC<React.SVGProps<SVGSVGElement>>;
+  IconComponent?: React.FC<SvgProps>;
 }
 
-const AuthInput: React.FC<AuthInputProps> = ({ inputTitle, placeHolder }) => {
+const AuthInput: React.FC<AuthInputProps> = ({
+  inputTitle,
+  placeHolder,
+  IconComponent,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
-  const isPasswordField = inputTitle?.toLowerCase() === 'password';
+  const isPasswordField =
+    inputTitle?.toLowerCase() === 'password' ||
+    inputTitle?.toLowerCase() === 'confirm password';
 
   return (
     <View style={styles.container}>
       {inputTitle && <Text style={styles.text}>{inputTitle}</Text>}
       <View style={styles.inputContainer}>
-        <ProfileIcon width={24} height={24} stroke="white" />
+        {IconComponent && (
+          <IconComponent width={24} height={24} stroke="white" />
+        )}
         <TextInput
           style={styles.input}
           placeholder={placeHolder}
@@ -31,7 +39,7 @@ const AuthInput: React.FC<AuthInputProps> = ({ inputTitle, placeHolder }) => {
           secureTextEntry={isPasswordField && !showPassword}
           keyboardType={isPasswordField ? 'default' : 'email-address'}
         />
-        {inputTitle == 'Password' && (
+        {(inputTitle == 'Password' || inputTitle == 'Confirm Password') && (
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Icon
               name={showPassword ? 'eye' : 'eye-off'}

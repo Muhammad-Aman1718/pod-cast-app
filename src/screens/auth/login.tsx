@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { StyleSheet, Text, View } from 'react-native';
 import HeadPhone from '../../assests/icon/headphone.svg';
 import AuthInput from '../../components/inputs/AuthInput';
 import AuthBtn from '../../components/buttons/AuthBtn';
 import GoogleFacebook from '../../components/buttons/GoogleFacebook';
 import GoogleIcon from '../../assests/icon/google.svg';
 import FacebookIcon from '../../assests/icon/facebook.svg';
+import ProfileIcon from '../../assests/icon/Profile.svg';
+import LockIcon from '../../assests/icon/Lock.svg';
 
 const Login = () => {
   return (
@@ -23,8 +24,16 @@ const Login = () => {
           </Text>
         </View>
 
-        <AuthInput inputTitle="Username" placeHolder="username" />
-        <AuthInput inputTitle="Password" placeHolder="At least 8 character" />
+        <AuthInput
+          inputTitle="Username"
+          placeHolder="username"
+          IconComponent={ProfileIcon}
+        />
+        <AuthInput
+          inputTitle="Password"
+          placeHolder="At least 8 character"
+          IconComponent={LockIcon}
+        />
         <Text style={styles.forgetText}>Forget Password?</Text>
         <AuthBtn btnTitle="Sign In" />
       </View>
@@ -60,10 +69,12 @@ const styles = StyleSheet.create({
   },
   inputContainerPageTitle: {
     alignItems: 'center',
+    rowGap: 5,
   },
   pageTitleText: {
     color: 'white',
     fontWeight: '600',
+    fontSize: 18,
   },
   pageTitleDiscription: {
     color: 'rgba(157, 157, 157, 1) ',
