@@ -18,7 +18,7 @@ const Register = () => {
       <View style={styles.container}>
         <View style={styles.logoContainer}>
           <HeadPhone width={40} height={40} stroke="white" />
-          <Text style={styles.logoContainerText}>Podcast</Text>
+          <Text style={styles.logoContainerText}>Doctor</Text>
         </View>
         <View style={styles.inputContainer}>
           <View style={styles.inputContainerPageTitle}>

@@ -55,7 +55,6 @@ react {
 }
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
-
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
@@ -79,9 +78,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.podcastapp"
+    namespace "com.doctor_appointment"
     defaultConfig {
-        applicationId "com.podcastapp"
+        applicationId "com.doctor_appointment"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -4,7 +4,6 @@
  *
  * @format
  */
-
 import RootNavigation from './src/navigation/stackNavigation/rootNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
