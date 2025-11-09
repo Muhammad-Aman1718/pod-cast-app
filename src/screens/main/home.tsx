@@ -6,7 +6,9 @@ const Home = () => {
   const navigation = useNavigation<any>();
   return (
     <View>
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Auth', { Screen: 'Login' })}
+      >
         <Text>Go to Login</Text>
       </TouchableOpacity>
     </View>

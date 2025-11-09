@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logoContainer: {
+    marginTop: 60,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
