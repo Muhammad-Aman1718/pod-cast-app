@@ -4,7 +4,7 @@ import Home from '../../screens/main/home';
 
 const App = createNativeStackNavigator();
 
-const appNavigator = () => {
+const AppNavigator = () => {
   return (
     <App.Navigator>
       <App.Screen
@@ -16,4 +16,4 @@ const appNavigator = () => {
   );
 };
 
-export default appNavigator;
+export default AppNavigator;

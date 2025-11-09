@@ -22,17 +22,17 @@ const RootNavigation = () => {
       ) : (
         <>
           <Stack.Screen
+            name="Auth"
+            component={AuthNavigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
             name="App"
             component={AppNavigator}
             options={{
               title: 'Home',
               headerShown: true,
             }}
-          />
-          <Stack.Screen
-            name="Auth"
-            component={AuthNavigator}
-            options={{ headerShown: false }}
           />
         </>
       )}
