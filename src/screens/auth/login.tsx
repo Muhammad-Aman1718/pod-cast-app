@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppNavigation } from '../../hooks/useAppNavigation';
-import AuthInput from '../../components/inputs/AuthInput';
 import GoogleIcon from '../../assests/icon/google.svg';
 import FacebookIcon from '../../assests/icon/facebook.svg';
 import FingerPrintIcon from '../../assests/icon/fingerPrint.svg';
+import AuthInput from '../../components/inputs/AuthInput';
 import Screen from '../../components/common/Screen';
 import CustomHeader from '../../components/CustomHeader';
 import WelcomeScreenBtn from '../../components/buttons/WelcomeScreenBtn';
@@ -14,46 +14,6 @@ const Login = () => {
   const navigation = useAppNavigation();
   return (
     <Screen>
-      {/* <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <HeadPhone width={40} height={40} stroke="white" />
-          <Text style={styles.logoContainerText}>Podcast</Text>
-        </View>
-        <View style={styles.inputContainer}>
-          <View style={styles.inputContainerPageTitle}>
-            <Text style={styles.pageTitleText}>Login</Text>
-            <Text style={styles.pageTitleDiscription}>
-              Please sign in to continue with the app.
-            </Text>
-          </View>
-
-          <AuthInput
-            inputTitle="Username"
-            placeHolder="username"
-            IconComponent={ProfileIcon}
-          />
-          <AuthInput
-            inputTitle="Password"
-            placeHolder="At least 8 character"
-            IconComponent={LockIcon}
-          />
-          <Text style={styles.forgetText}>Forget Password?</Text>
-          <AuthBtn btnTitle="Sign In" />
-          </View>
-          <View style={styles.googleFaceContainer}>
-          <GoogleFacebook IconComponent={GoogleIcon} title="Google" />
-          <GoogleFacebook IconComponent={FacebookIcon} title="Facebook" />
-        </View>
-        <View style={styles.alreadyAccount}>
-        <Text style={styles.alreadyAccountText}>Don't have an account?</Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Auth', { screen: 'Register' })}
-          >
-            <Text style={styles.signText}>Sign up</Text>
-          </TouchableOpacity>
-          </View>
-          </View> */}
-
       <View style={styles.container}>
         <CustomHeader title="Log In" />
         <View style={styles.formContainer}>
@@ -63,7 +23,14 @@ const Login = () => {
             placeHolder="example@example.com"
           />
           <AuthInput inputTitle="Password" placeHolder="*************" />
-          <Text style={styles.forgetText}>Forget Password?</Text>
+          <TouchableOpacity
+            style={styles.forgetTextBtn}
+            onPress={() =>
+              navigation.navigate('Auth', { screen: 'ForgetPassword' })
+            }
+          >
+            <Text style={styles.forgetText}>Forget Password?</Text>
+          </TouchableOpacity>
           <WelcomeScreenBtn
             title="Log In"
             textStyle={{ fontSize: 24, color: 'white' }}
@@ -113,13 +80,15 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 50,
   },
+  forgetTextBtn: {
+    marginBottom: 50,
+    width: '100%',
+  },
   forgetText: {
     fontSize: 12,
     fontWeight: 500,
     color: '#2260FF',
     textAlign: 'right',
-    width: '100%',
-    marginBottom: 50,
   },
   orText: {
     fontSize: 12,
@@ -132,6 +101,7 @@ const styles = StyleSheet.create({
   },
   alreadyAccount: {
     flexDirection: 'row',
+    marginTop: 30,
   },
   alreadyAccountText: {
     fontSize: 12,
