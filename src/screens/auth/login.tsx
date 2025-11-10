@@ -1,21 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppNavigation } from '../../hooks/useAppNavigation';
-import HeadPhone from '../../assests/icon/headphone.svg';
 import AuthInput from '../../components/inputs/AuthInput';
-import AuthBtn from '../../components/buttons/AuthBtn';
-import GoogleFacebook from '../../components/buttons/GoogleFacebook';
 import GoogleIcon from '../../assests/icon/google.svg';
 import FacebookIcon from '../../assests/icon/facebook.svg';
-import ProfileIcon from '../../assests/icon/Profile.svg';
-import LockIcon from '../../assests/icon/Lock.svg';
+import FingerPrintIcon from '../../assests/icon/fingerPrint.svg';
 import Screen from '../../components/common/Screen';
+import CustomHeader from '../../components/CustomHeader';
+import WelcomeScreenBtn from '../../components/buttons/WelcomeScreenBtn';
+import GoogleFacebookBtn from '../../components/buttons/GoogleFacebookBtn';
 
 const Login = () => {
   const navigation = useAppNavigation();
   return (
     <Screen>
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <View style={styles.logoContainer}>
           <HeadPhone width={40} height={40} stroke="white" />
           <Text style={styles.logoContainerText}>Podcast</Text>
@@ -40,18 +39,54 @@ const Login = () => {
           />
           <Text style={styles.forgetText}>Forget Password?</Text>
           <AuthBtn btnTitle="Sign In" />
-        </View>
-        <View style={styles.googleFaceContainer}>
+          </View>
+          <View style={styles.googleFaceContainer}>
           <GoogleFacebook IconComponent={GoogleIcon} title="Google" />
           <GoogleFacebook IconComponent={FacebookIcon} title="Facebook" />
         </View>
         <View style={styles.alreadyAccount}>
-          <Text style={styles.alreadyAccountText}>Don't have an account?</Text>
+        <Text style={styles.alreadyAccountText}>Don't have an account?</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate('Auth', { screen: 'Register' })}
           >
             <Text style={styles.signText}>Sign up</Text>
           </TouchableOpacity>
+          </View>
+          </View> */}
+
+      <View style={styles.container}>
+        <CustomHeader title="Log In" />
+        <View style={styles.formContainer}>
+          <Text style={styles.welcomeText}>Welcome</Text>
+          <AuthInput
+            inputTitle="Email or Mobile Number"
+            placeHolder="example@example.com"
+          />
+          <AuthInput inputTitle="Password" placeHolder="*************" />
+          <Text style={styles.forgetText}>Forget Password?</Text>
+          <WelcomeScreenBtn
+            title="Log In"
+            textStyle={{ fontSize: 24, color: 'white' }}
+            customStyle={{ backgroundColor: '#2260FF' }}
+          />
+          <Text style={styles.orText}>or</Text>
+          <View style={styles.authBtn}>
+            <GoogleFacebookBtn IconComponent={GoogleIcon} />
+            <GoogleFacebookBtn IconComponent={FacebookIcon} />
+            <GoogleFacebookBtn IconComponent={FingerPrintIcon} />
+          </View>
+          <View style={styles.alreadyAccount}>
+            <Text style={styles.alreadyAccountText}>
+              Don't have an account?
+            </Text>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Auth', { screen: 'Register' })
+              }
+            >
+              <Text style={styles.signText}>Sign up</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </Screen>
@@ -61,66 +96,52 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#182F52',
     padding: 10,
-    justifyContent: 'center',
+    backgroundColor: 'white',
+    width: '100%',
   },
-  logoContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+  formContainer: {
+    width: '100%',
     alignItems: 'center',
-    columnGap: 10,
-    marginBottom: 40,
+    marginTop: 30,
+    rowGap: 10,
   },
-  logoContainerText: {
+  welcomeText: {
     fontSize: 24,
-    color: 'white',
-    fontWeight: '700',
-  },
-  inputContainer: {
-    rowGap: 20,
-  },
-  inputContainerPageTitle: {
-    alignItems: 'center',
-    rowGap: 5,
-  },
-  pageTitleText: {
-    color: 'white',
+    color: '#2260FF',
     fontWeight: '600',
-    fontSize: 18,
-  },
-  pageTitleDiscription: {
-    color: 'rgba(157, 157, 157, 1) ',
-    fontSize: 12,
+    width: '100%',
+    marginBottom: 50,
   },
   forgetText: {
-    color: 'white',
-    marginTop: -10,
+    fontSize: 12,
+    fontWeight: 500,
+    color: '#2260FF',
     textAlign: 'right',
-    fontSize: 16,
-    marginBottom: 15,
+    width: '100%',
+    marginBottom: 50,
   },
-  googleFaceContainer: {
-    marginTop: 30,
+  orText: {
+    fontSize: 12,
+    fontWeight: '300',
+    color: '#070707',
+  },
+  authBtn: {
     flexDirection: 'row',
     columnGap: 10,
   },
   alreadyAccount: {
-    marginTop: 50,
     flexDirection: 'row',
-    alignContent: 'center',
-    justifyContent: 'center',
   },
   alreadyAccountText: {
-    color: 'rgba(157, 157, 157, 1)',
-    fontSize: 14,
+    fontSize: 12,
+    color: '#070707',
+    fontWeight: '300',
   },
   signText: {
-    fontSize: 14,
-    color: 'white',
-    fontWeight: '600',
-    alignContent: 'center',
-    justifyContent: 'center',
+    fontSize: 12,
+    color: '#2260FF',
+    fontWeight: '400',
   },
 });
 

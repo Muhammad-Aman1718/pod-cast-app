@@ -4,7 +4,7 @@ import { useAppNavigation } from '../../hooks/useAppNavigation';
 import HeadPhone from '../../assests/icon/headphone.svg';
 import AuthInput from '../../components/inputs/AuthInput';
 import AuthBtn from '../../components/buttons/AuthBtn';
-import GoogleFacebook from '../../components/buttons/GoogleFacebook';
+import GoogleFacebook from '../../components/buttons/GoogleFacebookBtn';
 import GoogleIcon from '../../assests/icon/google.svg';
 import FacebookIcon from '../../assests/icon/facebook.svg';
 import ProfileIcon from '../../assests/icon/Profile.svg';

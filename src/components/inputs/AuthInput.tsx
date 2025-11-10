@@ -6,20 +6,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { SvgProps } from 'react-native-svg';
 import Icon from 'react-native-vector-icons/Feather';
 
 interface AuthInputProps {
   inputTitle?: string;
   placeHolder?: string;
-  IconComponent?: React.FC<SvgProps>;
 }
 
-const AuthInput: React.FC<AuthInputProps> = ({
-  inputTitle,
-  placeHolder,
-  IconComponent,
-}) => {
+const AuthInput: React.FC<AuthInputProps> = ({ inputTitle, placeHolder }) => {
   const [showPassword, setShowPassword] = useState(false);
   const isPasswordField =
     inputTitle?.toLowerCase() === 'password' ||
@@ -29,13 +23,10 @@ const AuthInput: React.FC<AuthInputProps> = ({
     <View style={styles.container}>
       {inputTitle && <Text style={styles.text}>{inputTitle}</Text>}
       <View style={styles.inputContainer}>
-        {IconComponent && (
-          <IconComponent width={24} height={24} stroke="white" />
-        )}
         <TextInput
           style={styles.input}
           placeholder={placeHolder}
-          placeholderTextColor="rgba(157, 157, 157, 1)"
+          placeholderTextColor="#809CFF"
           secureTextEntry={isPasswordField && !showPassword}
           keyboardType={isPasswordField ? 'default' : 'email-address'}
         />
@@ -43,7 +34,7 @@ const AuthInput: React.FC<AuthInputProps> = ({
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Icon
               name={showPassword ? 'eye' : 'eye-off'}
-              color="white"
+              color="black"
               size={20}
             />
           </TouchableOpacity>
@@ -54,18 +45,20 @@ const AuthInput: React.FC<AuthInputProps> = ({
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    width: '100%',
+  },
   text: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '500',
-    color: 'white',
+    color: 'black',
     marginBottom: 10,
   },
 
   inputContainer: {
-    borderRadius: 10,
+    borderRadius: 13,
     height: 50,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: '#ECF1FF',
     flexDirection: 'row',
     alignItems: 'center',
     columnGap: 10,
@@ -74,6 +67,8 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
+    backgroundColor: '#ECF1FF',
+    color: 'black',
   },
   icon: {},
 });

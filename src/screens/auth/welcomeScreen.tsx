@@ -1,38 +1,41 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Logo from '../../assests/icon/logoBlue.svg';
-import WelcomeScreenBtn from '../../components/buttons/WelcomeScreenBtn';
 import { useAppNavigation } from '../../hooks/useAppNavigation';
+import Logo from '../../assests/icon/logoBlue.svg';
+import Screen from '../../components/common/Screen';
+import WelcomeScreenBtn from '../../components/buttons/WelcomeScreenBtn';
 
 const WelcomeScreen = () => {
   const navigation = useAppNavigation();
   return (
-    <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Logo style={styles.logo} />
-        <Text style={styles.titleText}>Skin</Text>
-        <Text style={styles.titleText}>Firts</Text>
-        <Text style={styles.headingText}>Dermatology Center</Text>
+    <Screen>
+      <View style={styles.container}>
+        <View style={styles.logoContainer}>
+          <Logo style={styles.logo} />
+          <Text style={styles.titleText}>Skin</Text>
+          <Text style={styles.titleText}>Firts</Text>
+          <Text style={styles.headingText}>Dermatology Center</Text>
+        </View>
+        <View style={styles.IntroContainer}>
+          <Text style={styles.intro}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Text>
+          <WelcomeScreenBtn
+            title="Log In"
+            customStyle={{ backgroundColor: '#2260FF' }}
+            textStyle={{ color: 'white' }}
+            onPress={() => navigation.navigate('Auth', { screen: 'Login' })}
+          />
+          <WelcomeScreenBtn
+            title="Sign Up"
+            customStyle={{ backgroundColor: '#CAD6FF' }}
+            textStyle={{ color: '#2260FF' }}
+            onPress={() => navigation.navigate('Auth', { screen: 'Register' })}
+          />
+        </View>
       </View>
-      <View style={styles.IntroContainer}>
-        <Text style={styles.intro}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </Text>
-        <WelcomeScreenBtn
-          title="Log In"
-          customStyle={{ backgroundColor: '#2260FF' }}
-          textStyle={{ color: 'white' }}
-          onPress={() => navigation.navigate('Auth', { screen: 'Login' })}
-        />
-        <WelcomeScreenBtn
-          title="Sign Up"
-          customStyle={{ backgroundColor: '#CAD6FF' }}
-          textStyle={{ color: '#2260FF' }}
-          onPress={() => navigation.navigate('Auth', { screen: 'Register' })}
-        />
-      </View>
-    </View>
+    </Screen>
   );
 };
 
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   IntroContainer: {
-    flex: 1,
+    flex: 2,
     width: 270,
     rowGap: 7,
     alignItems: 'center',
