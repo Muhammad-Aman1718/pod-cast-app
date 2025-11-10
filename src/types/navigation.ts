@@ -6,3 +6,10 @@ export type RootStackParamList = {
   Profile: { userId: string }; // agar params bhejne ho
   Settings: undefined;
 };
+
+export type TabScreen = {
+  Home: undefined;
+  Profile: undefined;
+  Chat: undefined;
+  Appointment: undefined;
+};

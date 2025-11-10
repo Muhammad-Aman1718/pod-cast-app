@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../../screens/main/home.tsx';
+import BottomNavigation from '../bottomNavigation/bottomNavigation.tsx';
+import Home from '../../screens/main/home/home.tsx';
 import Splash from '../../screens/splash/splash.tsx';
 import useSplash from '../../hooks/useSplash.ts';
 import AuthNavigator from './authNavigator.tsx';
@@ -21,19 +22,24 @@ const RootNavigation = () => {
         />
       ) : (
         <>
-          <Stack.Screen
+          {/* <Stack.Screen
             name="Auth"
             component={AuthNavigator}
             options={{ headerShown: false }}
-          />
+          /> */}
           <Stack.Screen
+            name="BottomNavigation"
+            component={BottomNavigation}
+            options={{ headerShown: false }}
+          />
+          {/* <Stack.Screen
             name="App"
             component={AppNavigator}
             options={{
               title: 'Home',
-              headerShown: true,
+              headerShown: false,
             }}
-          />
+          /> */}
         </>
       )}
     </Stack.Navigator>
