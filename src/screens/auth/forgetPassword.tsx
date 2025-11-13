@@ -11,7 +11,7 @@ const ForgetPassword = () => {
   return (
     <Screen>
       <View style={styles.container}>
-        <CustomHeader title="Edit Password" />
+        <CustomHeader title="Reset Password" />
         <View style={styles.formContainer}>
           <Text style={styles.messageText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
