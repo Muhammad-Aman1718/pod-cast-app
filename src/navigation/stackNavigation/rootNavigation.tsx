@@ -32,14 +32,14 @@ const RootNavigation = () => {
             component={BottomNavigation}
             options={{ headerShown: false }}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="App"
             component={AppNavigator}
             options={{
               title: 'Home',
               headerShown: false,
             }}
-          /> */}
+          />
         </>
       )}
     </Stack.Navigator>
