@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useAppNavigation } from '../../hooks/useAppNavigation';
-import GoogleIcon from '../../assests/icon/google.svg';
-import FacebookIcon from '../../assests/icon/facebook.svg';
-import FingerPrintIcon from '../../assests/icon/fingerPrint.svg';
+import GoogleIcon from '../../assets/icons/google.svg';
+import FacebookIcon from '../../assets/icons/facebook.svg';
+import FingerPrintIcon from '../../assets/icons/fingerPrint.svg';
 import AuthInput from '../../components/inputs/AuthInput';
 import Screen from '../../components/common/Screen';
 import CustomHeader from '../../components/CustomHeader';

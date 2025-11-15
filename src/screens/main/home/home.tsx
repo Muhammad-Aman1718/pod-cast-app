@@ -8,6 +8,7 @@ import {
   TextInput,
 } from 'react-native';
 
+import { useAppNavigation } from '../../../hooks/useAppNavigation';
 import NotificationIcon from '../../../assets/icons/notification.svg';
 import SettingIcon from '../../../assets/icons/setting.svg';
 import HeartIcon from '../../../assets/icons/heart.svg';
@@ -16,7 +17,6 @@ import FilterIcon from '../../../assets/icons/filter.svg';
 import DoctorIcon from '../../../assets/icons/doctors.svg';
 import ProfileImg from '../../../assets/imgs/profileImg.png';
 import Screen from '../../../components/common/Screen';
-import { useAppNavigation } from '../../../hooks/useAppNavigation';
 import DoctorCard from '../../../components/DoctorCard';
 
 const HomeHeader = () => {

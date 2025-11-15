@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useAppNavigation } from '../../hooks/useAppNavigation';
-import Logo from '../../assests/icon/logoBlue.svg';
+import Logo from '../../assets/icons/logoBlue.svg';
 import Screen from '../../components/common/Screen';
 import WelcomeScreenBtn from '../../components/buttons/WelcomeScreenBtn';
 

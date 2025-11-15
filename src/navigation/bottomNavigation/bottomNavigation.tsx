@@ -5,10 +5,10 @@ import Home from '../../screens/main/home/home';
 import Chat from '../../screens/main/chat/chat';
 import Profile from '../../screens/main/profile/profile';
 import Appointment from '../../screens/main/appointment/appointment';
-import HomeIcon from '../../assests/icon/home.svg';
-import ChatIcon from '../../assests/icon/chat.svg';
-import ProfileIcon from '../../assests/icon/profile.svg';
-import AppointmentIcon from '../../assests/icon/appointment.svg';
+import HomeIcon from '../../assets/icons/home.svg';
+import ChatIcon from '../../assets/icons/chat.svg';
+import ProfileIcon from '../../assets/icons/profile.svg';
+import AppointmentIcon from '../../assets/icons/appointment.svg';
 import Screen from '../../components/common/Screen';
 
 const Tab = createBottomTabNavigator();
