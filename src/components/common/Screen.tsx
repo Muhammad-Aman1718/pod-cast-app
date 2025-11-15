@@ -89,7 +89,7 @@ const Screen: React.FC<ScreenProps> = ({ children, scroll = true, style }) => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    // backgroundColor: '#fff',
+    backgroundColor: '#fff',
   },
   flex: {
     flex: 1,

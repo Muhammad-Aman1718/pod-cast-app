@@ -1,7 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomNavigation from '../bottomNavigation/bottomNavigation.tsx';
-import Home from '../../screens/main/home/home.tsx';
 import Splash from '../../screens/splash/splash.tsx';
 import useSplash from '../../hooks/useSplash.ts';
 import AuthNavigator from './authNavigator.tsx';

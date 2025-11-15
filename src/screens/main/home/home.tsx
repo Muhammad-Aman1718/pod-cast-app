@@ -1,197 +1,3 @@
-// import React from 'react';
-// import {
-//   View,
-//   Text,
-//   Image,
-//   StyleSheet,
-//   TouchableOpacity,
-//   TextInput,
-// } from 'react-native';
-// import NotificationIcon from '../../../assests/icon/notification.svg';
-// import SettingIcon from '../../../assests/icon/setting.svg';
-// import HeartIcon from '../../../assests/icon/heart.svg';
-// import SearchIcon from '../../../assests/icon/search.svg';
-// import FilterIcon from '../../../assests/icon/filter.svg';
-// import DoctorIcon from '../../../assests/icon/doctors.svg';
-// import ProfileImg from '../../../assests/imgs/profileImg.png';
-// import Screen from '../../../components/common/Screen';
-
-// const HomeHeader = () => {
-//   return (
-//     <Screen>
-//       <View style={styles.container}>
-//         {/* --- Top Row: Profile + Greeting + Icons --- */}
-//         <View style={styles.topRow}>
-//           <View style={styles.profileSection}>
-//             <Image source={ProfileImg} style={styles.profileImg} />
-//             <View style={styles.textContainer}>
-//               <Text style={styles.greetText}>Hi, Welcome Back</Text>
-//               <Text style={styles.nameText}>John Doe</Text>
-//             </View>
-//           </View>
-
-//           <View style={styles.iconContainer}>
-//             <TouchableOpacity style={styles.iconButton}>
-//               <NotificationIcon
-//                 width={14}
-//                 height={18}
-//                 stroke="#000000"
-//                 strokeWidth={0.1}
-//               />
-//             </TouchableOpacity>
-//             <TouchableOpacity style={styles.iconButton}>
-//               <SettingIcon
-//                 width={16}
-//                 height={18}
-//                 stroke="#000000"
-//                 strokeWidth={0.1}
-//               />
-//             </TouchableOpacity>
-//           </View>
-//         </View>
-
-//         {/* --- Middle Row: Doctors + Favorite --- */}
-//         <View style={styles.searchSection}>
-//           <View style={styles.optionRow}>
-//             <TouchableOpacity style={styles.option}>
-//               <DoctorIcon
-//                 width={18}
-//                 height={18}
-//                 stroke="#2260FF"
-//                 strokeWidth={0.3}
-//               />
-//               <Text style={styles.optionText}>Doctors</Text>
-//             </TouchableOpacity>
-//             <TouchableOpacity style={styles.option}>
-//               <HeartIcon
-//                 width={18}
-//                 height={18}
-//                 stroke="#2260FF"
-//                 strokeWidth={1}
-//               />
-//               <Text style={styles.optionText}>Favorite</Text>
-//             </TouchableOpacity>
-//           </View>
-
-//           {/* --- Search Bar --- */}
-//           <View style={styles.searchBar}>
-//             <TouchableOpacity style={styles.filterIcon}>
-//               <FilterIcon width={18} height={18} stroke="#2260FF" />
-//             </TouchableOpacity>
-//             <TextInput
-//               style={styles.searchSectionInput}
-//               placeholder="Search the"
-//             />
-//             <TouchableOpacity style={styles.searchIcon}>
-//               <SearchIcon
-//                 width={18}
-//                 height={18}
-//                 stroke="#2260FF"
-//                 strokeWidth={0.3}
-//               />
-//             </TouchableOpacity>
-//           </View>
-//         </View>
-//       </View>
-//     </Screen>
-//   );
-// };
-
-// export default HomeHeader;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     backgroundColor: '#fff',
-//     paddingHorizontal: 20,
-//     paddingTop: 10,
-//   },
-//   topRow: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//   },
-//   profileSection: {
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//   },
-//   profileImg: {
-//     width: 40,
-//     height: 40,
-//     borderRadius: 20,
-//     marginRight: 10,
-//   },
-//   textContainer: {
-//     flexDirection: 'column',
-//   },
-//   greetText: {
-//     color: '#2260FF',
-//     fontSize: 12,
-//     fontWeight: '300',
-//   },
-//   nameText: {
-//     color: '#000000',
-//     fontWeight: '400',
-//     fontSize: 14,
-//   },
-//   iconContainer: {
-//     flexDirection: 'row',
-//     gap: 10,
-//   },
-//   iconButton: {
-//     width: 27,
-//     height: 27,
-//     borderRadius: 20,
-//     backgroundColor: '#CAD6FF',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   searchSection: {
-//     borderWidth: 1,
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//     columnGap: 20,
-//     marginTop: 20,
-//   },
-//   optionRow: {
-//     flexDirection: 'row',
-//     justifyContent: 'flex-start',
-//     gap: 25,
-//   },
-//   option: {
-//     alignItems: 'center',
-//   },
-//   optionText: {
-//     marginTop: 3,
-//     fontSize: 12,
-//     color: '#2260FF',
-//     fontWeight: '300',
-//   },
-//   searchBar: {
-//     flex: 1,
-//     flexDirection: 'row',
-//     backgroundColor: '#CAD6FF',
-//     borderRadius: 20,
-//     paddingHorizontal: 12,
-//     alignItems: 'center',
-//     justifyContent: 'space-between',
-//     height: 40,
-//   },
-//   filterIcon: {
-//     backgroundColor: '#fff',
-//     padding: 6,
-//     borderRadius: 12,
-//   },
-//   searchSectionInput: {
-//     borderWidth: 1,
-//     height: 20,
-//     width: 100,
-//     // color: 'green',
-//   },
-//   searchIcon: {
-//     backgroundColor: '#CAD6FF',
-//   },
-// });
-
 import React from 'react';
 import {
   View,
@@ -202,16 +8,16 @@ import {
   TextInput,
 } from 'react-native';
 
-import NotificationIcon from '../../../assests/icon/notification.svg';
-import SettingIcon from '../../../assests/icon/setting.svg';
-import HeartIcon from '../../../assests/icon/heart.svg';
-import SearchIcon from '../../../assests/icon/search.svg';
-import FilterIcon from '../../../assests/icon/filter.svg';
-import DoctorIcon from '../../../assests/icon/doctors.svg';
-import ProfileImg from '../../../assests/imgs/profileImg.png';
+import NotificationIcon from '../../../assets/icons/notification.svg';
+import SettingIcon from '../../../assets/icons/setting.svg';
+import HeartIcon from '../../../assets/icons/heart.svg';
+import SearchIcon from '../../../assets/icons/search.svg';
+import FilterIcon from '../../../assets/icons/filter.svg';
+import DoctorIcon from '../../../assets/icons/doctors.svg';
+import ProfileImg from '../../../assets/imgs/profileImg.png';
 import Screen from '../../../components/common/Screen';
 import { useAppNavigation } from '../../../hooks/useAppNavigation';
-import { RootStackParamList } from '../../../types/navigation';
+import DoctorCard from '../../../components/DoctorCard';
 
 const HomeHeader = () => {
   const navigation = useAppNavigation();
@@ -219,96 +25,113 @@ const HomeHeader = () => {
   return (
     <Screen>
       <View style={styles.container}>
-        {/* --- Top Row --- */}
-        <View style={styles.topRow}>
-          <View style={styles.profileSection}>
-            <Image source={ProfileImg} style={styles.profileImg} />
-            <View style={styles.textContainer}>
-              <Text style={styles.greetText}>Hi, Welcome Back</Text>
-              <Text style={styles.nameText}>John Doe</Text>
+        <View>
+          <View style={styles.topRow}>
+            <View style={styles.profileSection}>
+              <Image source={ProfileImg} style={styles.profileImg} />
+              <View style={styles.textContainer}>
+                <Text style={styles.greetText}>Hi, Welcome Back</Text>
+                <Text style={styles.nameText}>John Doe</Text>
+              </View>
+            </View>
+
+            <View style={styles.iconContainer}>
+              <TouchableOpacity
+                style={styles.iconButton}
+                onPress={() =>
+                  navigation.navigate('App', { screen: 'Notification' })
+                }
+              >
+                <NotificationIcon
+                  width={14}
+                  height={18}
+                  stroke="#000000"
+                  strokeWidth={0.1}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.iconButton}
+                onPress={() =>
+                  navigation.navigate('App', { screen: 'Setting' })
+                }
+              >
+                <SettingIcon
+                  width={16}
+                  height={18}
+                  stroke="#000000"
+                  strokeWidth={0.1}
+                />
+              </TouchableOpacity>
             </View>
           </View>
 
-          <View style={styles.iconContainer}>
-            <TouchableOpacity
-              style={styles.iconButton}
-              onPress={() =>
-                navigation.navigate('App', { screen: 'Notification' })
-              }
-            >
-              <NotificationIcon
-                width={14}
-                height={18}
-                stroke="#000000"
-                strokeWidth={0.1}
-              />
-            </TouchableOpacity>
+          {/* --- Doctors + Favorite + Search Row --- */}
+          <View style={styles.rowContainer}>
+            {/* Doctors + Favorite */}
+            <View style={styles.optionRow}>
+              <TouchableOpacity
+                style={styles.option}
+                onPress={() =>
+                  navigation.navigate('App', { screen: 'Doctors' })
+                }
+              >
+                <DoctorIcon
+                  width={18}
+                  height={18}
+                  stroke="#2260FF"
+                  strokeWidth={0.3}
+                />
+                <Text style={styles.optionText}>Doctors</Text>
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.iconButton}
-              onPress={() => navigation.navigate('App', { screen: 'Setting' })}
-            >
-              <SettingIcon
-                width={16}
-                height={18}
-                stroke="#000000"
-                strokeWidth={0.1}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+              <TouchableOpacity
+                style={styles.option}
+                onPress={() =>
+                  navigation.navigate('App', { screen: 'Favorite' })
+                }
+              >
+                <HeartIcon
+                  width={18}
+                  height={18}
+                  stroke="#2260FF"
+                  strokeWidth={1}
+                />
+                <Text style={styles.optionText}>Favorite</Text>
+              </TouchableOpacity>
+            </View>
 
-        {/* --- Doctors + Favorite + Search Row --- */}
-        <View style={styles.rowContainer}>
-          {/* Doctors + Favorite */}
-          <View style={styles.optionRow}>
-            <TouchableOpacity
-              style={styles.option}
-              onPress={() => navigation.navigate('App', { screen: 'Doctors' })}
-            >
-              <DoctorIcon
-                width={18}
-                height={18}
-                stroke="#2260FF"
-                strokeWidth={0.3}
-              />
-              <Text style={styles.optionText}>Doctors</Text>
-            </TouchableOpacity>
+            {/* Search Bar */}
+            <View style={styles.searchBar}>
+              <TouchableOpacity style={styles.filterIcon}>
+                <FilterIcon width={18} height={18} stroke="#2260FF" />
+              </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.option}
-              onPress={() => navigation.navigate('App', { screen: 'Favorite' })}
-            >
-              <HeartIcon
-                width={18}
-                height={18}
-                stroke="#2260FF"
-                strokeWidth={1}
+              <TextInput
+                style={styles.searchInput}
+                placeholder="Search..."
+                placeholderTextColor="#000"
               />
-              <Text style={styles.optionText}>Favorite</Text>
-            </TouchableOpacity>
+
+              <TouchableOpacity style={styles.searchIcon}>
+                <SearchIcon
+                  width={18}
+                  height={18}
+                  stroke="#2260FF"
+                  strokeWidth={0.3}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
 
-          {/* Search Bar */}
-          <View style={styles.searchBar}>
-            <TouchableOpacity style={styles.filterIcon}>
-              <FilterIcon width={18} height={18} stroke="#2260FF" />
-            </TouchableOpacity>
-
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Search..."
-              placeholderTextColor="#000"
+          <View>
+            <DoctorCard
+              image={require('../assets/imgs/doctor1.png')}
+              name="Dr. Olivia Turner, M.D."
+              specialty="Dermato-Endocrinology"
+              rating={5}
+              reviews={60}
             />
-
-            <TouchableOpacity style={styles.searchIcon}>
-              <SearchIcon
-                width={18}
-                height={18}
-                stroke="#2260FF"
-                strokeWidth={0.3}
-              />
-            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -325,8 +148,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 10,
   },
-
-  /* --- Top Section --- */
 
   topRow: {
     flexDirection: 'row',
@@ -370,8 +191,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  /* --- Middle Row --- */
-
   rowContainer: {
     marginTop: 20,
     flexDirection: 'row',
@@ -394,8 +213,6 @@ const styles = StyleSheet.create({
     fontWeight: '300',
   },
 
-  /* --- Search Bar --- */
-
   searchBar: {
     flexDirection: 'row',
     backgroundColor: '#CAD6FF',
@@ -403,7 +220,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     alignItems: 'center',
     height: 40,
-    width: '55%', // perfect proportion like screenshot
+    width: '55%',
   },
 
   filterIcon: {
